@@ -1,0 +1,14 @@
+<%-include("header")-%>
+<h1>HOME</h1>
+<p><%=home%></p>
+<a href="/compose">COMPOSE</a>
+<%posts.forEach(function name(ele) {%>
+      <h1><%=ele.title%></h1>
+      <p><%=ele.content.substring(0,100)+"..."%>
+    <a href="/posts/<%=ele.title%>">Read More</a>
+    </p> 
+      
+<%});%>
+
+
+<%-include("footer")-%>
